@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#152033">
+  <meta name="description" content="Build a 1–2 page AI usage policy for your small business. Workshop edition.">
+  <title>AI Policy Builder · Workshop edition</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C3F66'/%3E%3Cpath d='M9 8.5h10.5a.5.5 0 0 1 .5.5v14a.5.5 0 0 1-.5.5H9a1 1 0 0 1-1-1V9.5a1 1 0 0 1 1-1z' fill='%23F3EFE6'/%3E%3Cpath d='M12 13h8M12 16.5h8M12 20h5' stroke='%231C3F66' stroke-width='1.4' stroke-linecap='round'/%3E%3Cpath d='M20 8.5h3.5a.5.5 0 0 1 .5.5v11.2c0 .6-.4 1.1-1 1.2l-3 0.6V8.5z' fill='%23A67C4A'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="./" data-testid="brand">
+      <svg class="mark" viewBox="0 0 36 36" aria-hidden="true">
+        <rect width="36" height="36" rx="9" fill="#1C3F66"/>
+        <path d="M10 9.5h12a.8.8 0 0 1 .8.8v15.4a.8.8 0 0 1-.8.8H10a1.4 1.4 0 0 1-1.4-1.4V10.9A1.4 1.4 0 0 1 10 9.5z" fill="#F3EFE6"/>
+        <path d="M13.2 15h9.2M13.2 18.6h9.2M13.2 22.2h6" stroke="#1C3F66" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M22.5 9.5h4.2a.7.7 0 0 1 .7.7v12.4c0 .7-.5 1.3-1.2 1.4l-3.7.7V9.5z" fill="#A67C4A"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">AI Policy Builder</span>
+        <span class="brand-sub">Workshop edition</span>
+      </span>
+    </a>
+    <p class="header-note">Not legal advice.</p>
+  </header>
+
+  <main id="main">
+    <!-- LANDING -->
+    <section id="view-landing" class="view is-active" data-testid="view-landing">
+      <div class="hero">
+        <p class="eyebrow">For small and mid-size businesses</p>
+        <h1>A 1–2 page AI policy, written for your business.</h1>
+        <p class="lede">Answer a few questions about how your company uses AI. Walk out with a short policy you can share with your team today.</p>
+        <div class="cta-row">
+          <button type="button" class="btn" id="btn-start" data-testid="btn-start">Build your policy</button>
+          <button type="button" class="btn btn-secondary" id="btn-sample" data-testid="btn-sample">See a sample policy</button>
+        </div>
+        <div class="meta-row">
+          <span>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.25" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3.2L10.2 10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            About 8 minutes
+          </span>
+          <span>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3.5 8.2l3 3 6-6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            No account needed
+          </span>
+          <span>
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 3.5h5.5L12.5 6v6.5H4v-9z" stroke="currentColor" stroke-width="1.3"/><path d="M9.5 3.5V6h2.8" stroke="currentColor" stroke-width="1.3"/></svg>
+            Download as Word or PDF
+          </span>
+        </div>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-num">Step 1</div>
+            <h2>Tell us about your business</h2>
+            <p>Industry, size, location, the tools you use, and how careful you want to be.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-num">Step 2</div>
+            <h2>Get a tailored policy</h2>
+            <p>Your answers fill in a plain-language template. Sections appear only when they apply.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-num">Step 3</div>
+            <h2>Take it with you</h2>
+            <p>Download a Word file, print a PDF, or copy the text to share with your team.</p>
+          </article>
+        </div>
+        <p class="legal-banner"><strong>Not legal advice.</strong> This tool drafts a short internal policy. It is not a substitute for advice from a qualified professional, especially if you handle health, financial, or other regulated data.</p>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section id="view-form" class="view" data-testid="view-form">
+      <div class="form-shell">
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span><strong id="progress-text">Step 1 of 4</strong> · <span id="progress-name">Your business</span></span>
+            <span>Required fields are marked <span class="req">*</span></span>
+          </div>
+          <div class="progress-bar" aria-hidden="true">
+            <span id="pseg-1" class="is-current"></span>
+            <span id="pseg-2"></span>
+            <span id="pseg-3"></span>
+            <span id="pseg-4"></span>
+          </div>
+        </div>
+
+        <form class="form-card" id="intake-form" data-testid="intake-form" novalidate>
+          <!-- Section 1 -->
+          <div class="section is-active" data-section="1">
+            <p class="section-kicker">Section 1 of 4</p>
+            <h2>Your business</h2>
+            <p class="section-help">A few basics so the policy can use your real name, size, and location.</p>
+
+            <div class="field" data-field="companyName">
+              <label class="field-label" for="companyName">What is your company's name? <span class="req">*</span></label>
+              <input class="input" id="companyName" name="companyName" type="text" autocomplete="organization" required maxlength="120" data-testid="companyName">
+              <div class="error" id="err-companyName" hidden></div>
+            </div>
+
+            <div class="field" data-field="industry">
+              <label class="field-label" for="industry">What industry are you in?</label>
+              <span class="hint">Choose the closest fit.</span>
+              <select class="input" id="industry" name="industry" data-testid="industry">
+                <option value="">Select an industry</option>
+                <option value="professional">Professional services (legal, accounting, consulting)</option>
+                <option value="marketing">Marketing, advertising, or creative</option>
+                <option value="healthcare">Healthcare or health services</option>
+                <option value="financial">Financial services or insurance</option>
+                <option value="retail">Retail or e-commerce</option>
+                <option value="technology">Technology or software</option>
+                <option value="education">Education</option>
+                <option value="manufacturing">Manufacturing or logistics</option>
+                <option value="hospitality">Hospitality or food service</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="subfields" id="industry-other-wrap" hidden>
+                <label class="hint" for="industryOther">Please describe your industry in a few words.</label>
+                <input class="input" id="industryOther" name="industryOther" type="text" maxlength="80">
+              </div>
+            </div>
+
+            <div class="field" data-field="size">
+              <fieldset>
+                <legend>About how many people work at your company, including employees and regular contractors?</legend>
+                <div class="options cols-2">
+                  <label class="option"><input type="radio" name="size" value="1-9"> <span><span class="opt-title">1–9</span></span></label>
+                  <label class="option"><input type="radio" name="size" value="10-49"> <span><span class="opt-title">10–49</span></span></label>
+                  <label class="option"><input type="radio" name="size" value="50-249"> <span><span class="opt-title">50–249</span></span></label>
+                  <label class="option"><input type="radio" name="size" value="250+"> <span><span class="opt-title">250 or more</span></span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="field" data-field="regions">
+              <fieldset>
+                <legend>Where does your company operate, and where do most of your customers live? <span class="req">*</span></legend>
+                <span class="hint">Select all that apply. If you choose the United States or Canada, name the main state(s) or province(s) if you can.</span>
+                <div class="options">
+                  <label class="option"><input type="checkbox" name="regions" value="us" data-testid="region-us"> <span><span class="opt-title">United States</span></span></label>
+                  <div class="subfields" id="us-states-wrap" hidden>
+                    <label class="hint" for="usStates">Which state or states?</label>
+                    <input class="input" id="usStates" name="usStates" type="text" placeholder="For example, California" maxlength="80">
+                  </div>
+                  <label class="option"><input type="checkbox" name="regions" value="canada" data-testid="region-canada"> <span><span class="opt-title">Canada</span></span></label>
+                  <div class="subfields" id="ca-provinces-wrap" hidden>
+                    <label class="hint" for="caProvinces">Which province or territory?</label>
+                    <input class="input" id="caProvinces" name="caProvinces" type="text" placeholder="For example, Ontario" maxlength="80">
+                  </div>
+                  <label class="option"><input type="checkbox" name="regions" value="eu"> <span><span class="opt-title">European Union</span></span></label>
+                  <label class="option"><input type="checkbox" name="regions" value="uk"> <span><span class="opt-title">United Kingdom</span></span></label>
+                  <label class="option"><input type="checkbox" name="regions" value="australia_nz"> <span><span class="opt-title">Australia or New Zealand</span></span></label>
+                  <label class="option"><input type="checkbox" name="regions" value="other"> <span><span class="opt-title">Other</span></span></label>
+                  <div class="subfields" id="jurisdiction-other-wrap" hidden>
+                    <label class="hint" for="jurisdictionOther">Please specify.</label>
+                    <input class="input" id="jurisdictionOther" name="jurisdictionOther" type="text" maxlength="80">
+                  </div>
+                </div>
+              </fieldset>
+              <div class="error" id="err-regions" hidden></div>
+            </div>
+          </div>
+
+          <!-- Section 2 -->
+          <div class="section" data-section="2">
+            <p class="section-kicker">Section 2 of 4</p>
+            <h2>Tools and data</h2>
+            <p class="section-help">This controls which tools are approved in the policy, and which data rules appear.</p>
+
+            <div class="field" data-field="tools">
+              <fieldset>
+                <legend>Which AI tools do your staff already use, or plan to use in the next six months? <span class="req">*</span></legend>
+                <span class="hint">Select all that apply.</span>
+                <div class="options">
+                  <label class="option"><input type="checkbox" name="tools" value="chatgpt" data-testid="tool-chatgpt"> <span class="opt-title">ChatGPT / OpenAI</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="copilot"> <span class="opt-title">Microsoft Copilot</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="gemini"> <span class="opt-title">Google Gemini</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="claude"> <span class="opt-title">Claude / Anthropic</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="canva" data-testid="tool-canva"> <span class="opt-title">Canva AI</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="image"> <span class="opt-title">Midjourney, DALL·E, or other image generators</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="coding"> <span class="opt-title">GitHub Copilot or other coding assistants</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="industry_specific"> <span class="opt-title">Industry-specific or built-in product AI</span></label>
+                  <div class="subfields" id="tools-industry-wrap" hidden>
+                    <label class="hint" for="toolsIndustry">Please name the tool if you can.</label>
+                    <input class="input" id="toolsIndustry" name="toolsIndustry" type="text" maxlength="80">
+                  </div>
+                  <label class="option"><input type="checkbox" name="tools" value="unsure"> <span class="opt-title">We are not sure yet</span></label>
+                  <label class="option"><input type="checkbox" name="tools" value="other"> <span class="opt-title">Other</span></label>
+                  <div class="subfields" id="tools-other-wrap" hidden>
+                    <label class="hint" for="toolsOther">Please name the tool.</label>
+                    <input class="input" id="toolsOther" name="toolsOther" type="text" maxlength="80">
+                  </div>
+                </div>
+              </fieldset>
+              <div class="error" id="err-tools" hidden></div>
+            </div>
+
+            <div class="field" data-field="data">
+              <fieldset>
+                <legend>What kinds of sensitive data might staff enter into an AI tool, or have an AI tool process? <span class="req">*</span></legend>
+                <span class="hint">Select all that apply.</span>
+                <div class="options">
+                  <label class="option"><input type="checkbox" name="data" value="pii"> <span class="opt-title">Customer or employee personal information</span><span class="opt-desc">Names, emails, contact details, or other identifiers</span></label>
+                  <label class="option"><input type="checkbox" name="data" value="health" data-testid="data-health"> <span class="opt-title">Health or medical information</span></label>
+                  <label class="option"><input type="checkbox" name="data" value="financial"> <span class="opt-title">Financial information</span><span class="opt-desc">Account numbers, payment data, tax records</span></label>
+                  <label class="option"><input type="checkbox" name="data" value="confidential" data-testid="data-confidential"> <span class="opt-title">Confidential client or customer business information</span></label>
+                  <label class="option"><input type="checkbox" name="data" value="children"> <span class="opt-title">Information about children</span></label>
+                  <label class="option"><input type="checkbox" name="data" value="no_sensitive" data-testid="data-none"> <span class="opt-title">We try not to put any sensitive data into AI tools</span></label>
+                  <label class="option"><input type="checkbox" name="data" value="unsure"> <span class="opt-title">Not sure</span></label>
+                </div>
+              </fieldset>
+              <div class="error" id="err-data" hidden></div>
+            </div>
+          </div>
+
+          <!-- Section 3 -->
+          <div class="section" data-section="3">
+            <p class="section-kicker">Section 3 of 4</p>
+            <h2>How you use AI</h2>
+            <p class="section-help">This shapes the rules on customer-facing use, product features, and how cautious the policy should be.</p>
+
+            <div class="field" data-field="customerFacing">
+              <fieldset>
+                <legend>Does your company use, or plan to use, AI in ways customers can see or interact with?</legend>
+                <span class="hint">Examples include a chatbot, AI-written emails or ads, or content published under your company's or a client's name.</span>
+                <div class="options">
+                  <label class="option"><input type="radio" name="customerFacing" value="yes" data-testid="cf-yes"> <span class="opt-title">Yes, we already do</span></label>
+                  <label class="option"><input type="radio" name="customerFacing" value="planning"> <span class="opt-title">We plan to</span></label>
+                  <label class="option"><input type="radio" name="customerFacing" value="internal"> <span class="opt-title">No, AI is only used internally</span></label>
+                  <label class="option"><input type="radio" name="customerFacing" value="unsure"> <span class="opt-title">Not sure</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="field" data-field="products">
+              <fieldset>
+                <legend>Do you build AI features into a product or service you sell?</legend>
+                <div class="options">
+                  <label class="option"><input type="radio" name="products" value="yes"> <span class="opt-title">Yes</span></label>
+                  <label class="option"><input type="radio" name="products" value="planning"> <span class="opt-title">We are planning to</span></label>
+                  <label class="option"><input type="radio" name="products" value="no"> <span class="opt-title">No</span></label>
+                  <label class="option"><input type="radio" name="products" value="unsure"> <span class="opt-title">Not sure</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="field" data-field="caution">
+              <fieldset>
+                <legend>How cautious should this policy be? <span class="req">*</span></legend>
+                <div class="options">
+                  <label class="option"><input type="radio" name="caution" value="permissive" data-testid="caution-permissive"> <span><span class="opt-title">Permissive</span><span class="opt-desc">Give staff flexibility; only block clearly risky uses</span></span></label>
+                  <label class="option"><input type="radio" name="caution" value="balanced" data-testid="caution-balanced"> <span><span class="opt-title">Balanced</span><span class="opt-desc">Allow useful tools with clear guardrails — recommended for most SMBs</span></span></label>
+                  <label class="option"><input type="radio" name="caution" value="strict" data-testid="caution-strict"> <span><span class="opt-title">Strict</span><span class="opt-desc">Minimize AI use of sensitive data and require extra approvals</span></span></label>
+                </div>
+              </fieldset>
+              <div class="error" id="err-caution" hidden></div>
+            </div>
+          </div>
+
+          <!-- Section 4 -->
+          <div class="section" data-section="4">
+            <p class="section-kicker">Section 4 of 4</p>
+            <h2>Ownership and wrap-up</h2>
+            <p class="section-help">These last details are optional, but they make the policy easier to use on Monday morning.</p>
+
+            <div class="field" data-field="policyOwner">
+              <label class="field-label" for="policyOwner">Who will own this policy?</label>
+              <span class="hint">Give a name and/or role. This person approves tools, answers questions, and reviews the policy.</span>
+              <input class="input" id="policyOwner" name="policyOwner" type="text" maxlength="120" placeholder="For example, Priya Shah, Director of Operations" data-testid="policyOwner">
+            </div>
+
+            <div class="field" data-field="contracts">
+              <label class="field-label" for="contracts">Do any clients, contracts, or industry rules already limit how you can use AI or share data with tools?</label>
+              <span class="hint">If yes, briefly describe. If no, write “None.”</span>
+              <textarea class="textarea" id="contracts" name="contracts" maxlength="500" data-testid="contracts"></textarea>
+            </div>
+
+            <div class="field" data-field="review">
+              <fieldset>
+                <legend>Before AI-assisted work goes to a customer or is published, who is expected to review it?</legend>
+                <div class="options">
+                  <label class="option"><input type="radio" name="review" value="creator"> <span class="opt-title">The person who created it</span></label>
+                  <label class="option"><input type="radio" name="review" value="manager"> <span class="opt-title">A manager or second reviewer</span></label>
+                  <label class="option"><input type="radio" name="review" value="depends"> <span class="opt-title">It depends on the type of work</span></label>
+                  <label class="option"><input type="radio" name="review" value="none"> <span class="opt-title">We don't have a rule yet</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="field" data-field="personalAccounts">
+              <fieldset>
+                <legend>Are staff allowed to use personal (non-company) AI accounts for work?</legend>
+                <div class="options">
+                  <label class="option"><input type="radio" name="personalAccounts" value="not_allowed"> <span class="opt-title">No, only company-approved accounts</span></label>
+                  <label class="option"><input type="radio" name="personalAccounts" value="allowed"> <span class="opt-title">Yes, if they follow this policy</span></label>
+                  <label class="option"><input type="radio" name="personalAccounts" value="undecided"> <span class="opt-title">We don't have a rule yet</span></label>
+                </div>
+              </fieldset>
+            </div>
+
+            <div class="field" data-field="email">
+              <label class="field-label" for="email">Email <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <span class="hint">Leave this if you'd like the workshop host to follow up. Nothing is sent from this page — your email stays in this browser unless you choose to share it.</span>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="you@company.com" data-testid="email">
+              <div class="error" id="err-email" hidden></div>
+            </div>
+
+            <div class="recap" id="recap" data-testid="recap"></div>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-ghost" id="btn-back" data-testid="btn-back">Back</button>
+            <button type="button" class="btn" id="btn-next" data-testid="btn-next">Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="view-result" class="view" data-testid="view-result">
+      <div class="result-shell">
+        <div class="result-toolbar">
+          <button type="button" class="btn" id="btn-download" data-testid="btn-download">Download as Word</button>
+          <button type="button" class="btn btn-secondary" id="btn-copy" data-testid="btn-copy">Copy text</button>
+          <button type="button" class="btn btn-secondary" id="btn-print" data-testid="btn-print">Print / Save as PDF</button>
+          <button type="button" class="btn btn-ghost" id="btn-restart" data-testid="btn-restart">Start over</button>
+          <span class="spacer"></span>
+          <span class="toast" id="toast" data-testid="toast" role="status"></span>
+        </div>
+        <div class="policy-meta">
+          <span id="word-count" data-testid="word-count"></span>
+          <span>Fits about two printed pages.</span>
+        </div>
+        <p class="legal-banner"><strong>Not legal advice.</strong> This is a draft internal policy generated from your answers. Have a qualified professional review it before you rely on it.</p>
+        <article class="paper" id="policy-document" data-testid="policy-document"></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    AI Policy Builder · Workshop edition. This draft is not legal advice.
+  </footer>
+
+  <script src="vendor/docx.umd.js"></script>
+  <script src="generator.js"></script>
+  <script src="docx-export.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
